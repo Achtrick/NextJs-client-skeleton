@@ -1,0 +1,122 @@
+.navbar {
+  width: 100%;
+  height: 60px;
+  display: inline-flex;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: solid 1px #ccc;
+  position: fixed;
+  font-family: "Noticia Text", serif;
+}
+.navBtn {
+  display: none;
+  width: 30px;
+  cursor: pointer;
+}
+
+.logo {
+  width: 180px;
+  display: flex;
+  justify-content: left;
+  padding-left: 30px;
+  align-items: center;
+  cursor: pointer;
+}
+.navItems {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+.navItems ul {
+  list-style: none;
+}
+.navItems li {
+  display: inline;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.navItems li:hover {
+  background-color: white;
+  color: rgb(17, 116, 76);
+}
+
+.navControls {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding-right: 10px;
+}
+
+.navControls ul {
+  list-style: none;
+}
+.navControls li {
+  display: inline;
+}
+.navControls a {
+  font-size: x-small;
+}
+.subscribe {
+  color: white;
+  background-color: rgb(17, 116, 76);
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  transition: all 0.3s;
+}
+.subscribe:hover {
+  background-color: white;
+  color: rgb(17, 116, 76);
+}
+.search {
+  color: rgb(0, 0, 0);
+  background-color: rgba(17, 116, 76, 0);
+  border: none;
+  transition: all 0.3s;
+  padding: 5px;
+}
+.search:hover {
+  background-color: white;
+  color: rgb(17, 116, 76);
+}
+
+.mobileMenu {
+  margin-left: -100vw;
+  opacity: 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  z-index: 1;
+  background-color: white;
+  border-right: 1px solid #ccc;
+  box-shadow: 0px 0px 10px #ccc;
+  height: 100%;
+  transition: all 0.3s;
+}
+.open {
+  opacity: 1;
+  margin-left: 0px;
+}
+@media (max-width: 768px) {
+  .navItems {
+    display: none;
+  }
+  .navControls {
+    width: 100%;
+    padding-right: 0px;
+    justify-content: right;
+  }
+  .subscribe {
+    display: none;
+  }
+  .navBtn {
+    display: block;
+  }
+}

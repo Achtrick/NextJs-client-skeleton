@@ -1,7 +1,15 @@
-import '../styles/globals.css'
+import "../styles/globals.css";
+import Navbar from "../Components/Navbar";
+import { AppContext } from "../Components/AppContext";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <AppContext.Provider value={{}}>
+      <Navbar>
+        <Component {...pageProps} />
+      </Navbar>
+    </AppContext.Provider>
+  );
 }
 
-export default MyApp
+export default MyApp;
